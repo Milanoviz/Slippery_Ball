@@ -51,6 +51,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallRotation.cs" />
+     <Compile Include="Assets\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Spawner.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Ready_Game/Slippery Ball/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
