@@ -1,18 +1,36 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BallRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float _speed;
+
+    private Transform _centreCircle;
+    
+    private void Awake()
     {
-        
+        _centreCircle = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        MoveBall();
+        ChangeDirection();
     }
+
+    private void MoveBall()
+    {
+        _centreCircle.Rotate(0,0, _speed * Time.deltaTime);
+    }
+
+    private void ChangeDirection()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            _speed = -_speed;
+        }
+    }
+    
 }
