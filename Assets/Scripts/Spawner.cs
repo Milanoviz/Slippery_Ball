@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Enemy _enemyTeaplate;
     [SerializeField] private Bonus _bonusTeaplate;
 
+
     private void Start()
     {
         StartCoroutine(SpawnEnemy());
