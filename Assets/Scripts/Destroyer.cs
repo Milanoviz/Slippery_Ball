@@ -11,5 +11,10 @@ public class Destroyer : MonoBehaviour
         {
             Destroy(enemy.gameObject);
         }
+
+        if (other.gameObject.TryGetComponent(out Bonus bonus))
+        {
+            Destroy(bonus.gameObject);
+        }
     }
 }
